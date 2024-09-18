@@ -8,7 +8,6 @@ resource "aws_vpc" "network" {
 resource "aws_subnet" "subnetwork" {
   vpc_id     = aws_vpc.network.id
   cidr_block = var.subnet_cidr
-  id         = var.subnet_id
   tags = {
     Environment = var.environment
   }
@@ -16,7 +15,6 @@ resource "aws_subnet" "subnetwork" {
 
 resource "aws_security_group" "security_group" {
   vpc_id = aws_vpc.network.id
-  id     = var.sg_id
   tags = {
     Environment = var.environment
   }
