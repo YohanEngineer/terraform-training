@@ -1,6 +1,5 @@
 resource "aws_vpc" "network" {
   cidr_block = var.vpc_cidr
-  id         = var.vpc_id
   tags = {
     Environment = var.environment
   }
