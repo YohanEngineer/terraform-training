@@ -10,8 +10,8 @@ variable "default" {
 
 }
 
-variable "id" {
-  description = "The ID of the VPC"
+variable "sg_id" {
+  description = "The ID of the security group"
   type        = string
 
 }

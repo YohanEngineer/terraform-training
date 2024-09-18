@@ -17,7 +17,7 @@ resource "aws_subnet" "subnetwork" {
 
 resource "aws_security_group" "security_group" {
   vpc_id = aws_vpc.network.id
-  id     = var.id
+  id     = var.sg_id
   tags = {
     Environment = var.environment
   }
